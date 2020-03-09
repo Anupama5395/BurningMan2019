@@ -32,7 +32,7 @@ for voice in voices.voices:
 	print('Natural Sample Rate Hertz: {}\n'.format(
 		voice.natural_sample_rate_hertz))
 	# Set the text input to be synthesized
-	synthesis_input = texttospeech.types.SynthesisInput(text="Hey, Chip!")
+	synthesis_input = texttospeech.types.SynthesisInput(text="Hey, maya!")
 	# Build the voice request, select the language code and the ssml voice gender ("neutral")
 	voice = texttospeech.types.VoiceSelectionParams(
 		language_code=language_code,
@@ -48,7 +48,7 @@ for voice in voices.voices:
 
 	# The response's audio_content is binary.
 	
-	audio_file_name='hello_chip_'+str(i)+'.wav'
+	audio_file_name='hey_maya_'+str(i)+'.wav'
 	i+=1
 	audio_file_path=os.path.join(audio_dir,audio_file_name)
 	with open(audio_file_path, 'wb') as out:
